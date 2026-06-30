@@ -10,14 +10,24 @@
 <body>
     <header>
         <div class="header-inner">
+            <div class="logo-container">
             <img src="logo.png" alt="Logo" class="logo">
-            <button id="themeToggle" aria-label="Toggle light and dark mode">🌙</button>
+            <h2>Mood-Based Playlist Recommender</h2>
+            </div>
 
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
                     <li><a href="#moods">Moods</a></li>
+                    <li><a href="#recommendations">Songs</a></li>
+                    <li>
+                        <button class="info-btn">
+                            i About Recommendations
+                        </button>
+                    </li>
+                    <li>
+                        <button id="themeToggle" aria-label="Toggle light and dark mode">🌙</button>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -27,7 +37,7 @@
         <section id="home" class="home-section">
             <h1>Welcome to the Mood-Based Playlist Recommender</h1>
             <p>Discover music that matches your mood with our personalized playlist recommendations.</p>
-            <a href="#moods" class="cta-button">Get Started</a>
+            <a href="#moods" class="cta-button">Explore Moods</a>
         </section>
 
         <section id="about" class="about-section">
@@ -36,17 +46,56 @@
         </section>
 
         <section id="moods" class="moods-section">
-            <h2>Choose Your Mood</h2>
+            <h2>How are you feeling?</h2>
             <div class="mood-options">
-                <button class="mood-button" data-mood="happy">Happy</button>
-                <button class="mood-button" data-mood="sad">Sad</button>
-                <button class="mood-button" data-mood="energetic">Energetic</button>
-                <button class="mood-button" data-mood="focused">Focused</button>
-                <button class="mood-button" data-mood="calm">Calm</button>
-                <button class="mood-button" data-mood="Sensual">Sensual</button>
+                <div class="card-happy">
+                    <h3>Happy</h3>
+                    <p>Uplifting and feel-good music to brighten your day.</p>
+                </div>
+
+                <div class="card-sad">
+                    <h3>Sad</h3>
+                    <p>Emotional and reflective sounds when you need them.</p>
+                </div>
+
+                <div class="card-energetic">
+                    <h3>Energetic</h3>
+                    <p>High-energy tracks to get you moving.</p>
+                </div>
+
+                <div class="card-focused">
+                <h3>Focused</h3>
+                <p>Concentrated and motivating music for productivity.</p>
+                </div>
+
+                <div class="card-calm">
+                <h3>Calm</h3>
+                <p>Calm and soothing sounds to help you unwind.</p>
+                </div>
+
+                <div class="card-sensual">
+                <h3>Sensual</h3>
+                <p>Intimate and passionate music for a romantic evening.</p>
+                </div>
             </div>
         </section>
+
+        
+
+
+
+
+
+
+               
+        </section>
     </main>
+
+
+
+
+               
+      
 
 
 
