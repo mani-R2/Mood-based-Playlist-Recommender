@@ -76,14 +76,22 @@ nav a:hover {
     color: #007BFF;
 }
 
-.mood-section {
+.moods-section {
     padding: 50px 20px;
     text-align: center;
 }
 
-.mood-section h2 {
+.moods-section h2 {
     font-size: 2em;
     margin-bottom: 20px;
+
+}
+
+.moods-section p {
+    max-width: auto;
+    margin: auto;
+    color: #007BFF;
+    justify-content: center;
 }
 
 .mood-grid {
@@ -91,9 +99,12 @@ nav a:hover {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     justify-items: center;
+    max-width: auto;
 }
 
 .mood-grid div {
+    width: 320px;
+    height: 450px;
     padding: 20px;
     border-radius: 24px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -105,28 +116,46 @@ nav a:hover {
     transform: translateY(-5px);
 }
 
-.card-happy {
+.mood-card-happy {
     background-image: url("images/happy.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.card-sad {
+.mood-card-sad {
     background-image: url("images/sad.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.card-energetic {
+.mood-card-energetic {
     background-image: url("images/energetic.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.card-focused {
+.mood-card-focused {
     background-image: url("images/focused.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.card-calm {
+.mood-card-calm {
     background-image: url("images/calm.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.card-sensual {
+.mood-card-sensual {
     background-image: url("images/sensual.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 
@@ -153,3 +182,4 @@ nav a:hover {
     display: grid;
     gap: 10px;
 }
+

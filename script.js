@@ -1,4 +1,4 @@
-const recommendationSection = document.getElementById("recommendation-section");
+const recommendationsSection = document.getElementById("recommendations-section");
 const recommendationTitle = document.getElementById("recommendation-title");
 const songList = document.getElementById("song-list");
 
@@ -47,7 +47,7 @@ const moodSongs = {
     },
 };
 
-document.querySelectorAll(".mood-grid div").forEach(card => {
+document.querySelectorAll(".mood-card").forEach(card => {
     card.addEventListener("click", () => {
         const mood = card.getAttribute("data-mood");
         const selectedMood = moodSongs[mood];
@@ -61,6 +61,8 @@ document.querySelectorAll(".mood-grid div").forEach(card => {
             songList.appendChild(li);
         });
 
-        recommendationSection.style.display = "block";
+        recommendationsSection.style.display = "block";
+        recommendationsSection.classList.remove("hidden");
+        
     });
 });
