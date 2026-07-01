@@ -47,7 +47,7 @@ const moodSongs = {
     },
 };
 
-docoument.querySelectorAll(".mood-options div").forEach(card => {
+document.querySelectorAll(".mood-grid div").forEach(card => {
     card.addEventListener("click", () => {
         const mood = card.getAttribute("data-mood");
         const selectedMood = moodSongs[mood];
