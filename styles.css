@@ -107,8 +107,8 @@ nav a {
 }
 
 .home-section p {
-    max-width: auto;
-    margin: auto;
+    max-width: 700px;
+    margin: 0 auto;
     color: #007BFF;
 }
 
@@ -134,8 +134,8 @@ nav a {
 }
 
 .moods-section p {
-    max-width: auto;
-    margin: auto;
+    max-width: 700px;
+    margin: 0 auto;
     color: #1F2937;
     justify-content: center;
 }
@@ -145,7 +145,6 @@ nav a {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     justify-items: center;
-    max-width: auto;
 }
 
 .mood-card {
@@ -165,6 +164,7 @@ nav a {
 
 .mood-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 22px 40px rgba(0,0,0,.35);
 }
 
 .mood-card-happy {
@@ -220,7 +220,8 @@ nav a {
 }  
 
 .recommendations {
-    margin-top: 20px;
+    margin: 40px auto;
+    max-width: 900px;
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -276,7 +277,7 @@ nav a {
     background-color: #007BFF;
     color: #fff;
     text-decoration: none;
-    border-radius: 3px;
+    border-radius: 8px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 .listen-btn:hover {
@@ -348,6 +349,8 @@ footer {
     background: rgba(15,23,42,.75);
     backdrop-filter: blur(10px);
     color: white;
+    padding: 20px;
+    text-align: center;
 }
 
 /* dark mode styles */
@@ -407,19 +410,17 @@ body.dark-mode .moods-section p{
 
 /* mood cards */
 body.dark-mode .mood-card{
-
     box-shadow:0 10px 25px rgba(0,0,0,.45);
+}
 
+body.dark-mode .mood-card:hover {
+    box-shadow: 0 22px 40px rgba(0,0,0,.65);
 }
 
 /* recommendations */
-body.dark-mode .recommendations{
-    background:#1E293B;
-    border:1px solid #334155;
-}
-
 body.dark-mode .recommendations, body.dark-mode .modal-content {
     background: rgba(15,23,42,.30);
+    border:1px solid #334155;
 }
 
 body.dark-mode #recommendation-title{
