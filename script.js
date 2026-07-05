@@ -116,8 +116,8 @@ document.querySelectorAll(".mood-card").forEach(card => {
             songCard.classList.add("song-card");
 
             songCard.innerHTML = `
-                <p class="song-title">🎵 ${song}</p>
-                <a href="#" target="_blank" class="listen-btn">
+                <p class="song-title">🎵 ${song.name}</p>
+                <a href="${song.link}" target="_blank" class="listen-btn">
                     Listen
                 </a>
             `;
@@ -126,4 +126,25 @@ document.querySelectorAll(".mood-card").forEach(card => {
             recommendationsSection.classList.remove("hidden");
         });
     });
+});
+
+const aboutBtn = document.getElementById("aboutBtn");
+const aboutModal = document.getElementById("aboutModal");
+const closeModal = document.getElementById("closeModal");
+
+// Open the modal
+aboutBtn.addEventListener("click", () => {
+    aboutModal.classList.remove("hidden");
+});
+
+// Close when clicking the X
+closeModal.addEventListener("click", () => {
+    aboutModal.classList.add("hidden");
+});
+
+// Close when clicking outside the modal
+window.addEventListener("click", (event) => {
+    if (event.target === aboutModal) {
+        aboutModal.classList.add("hidden");
+    }
 });

@@ -7,8 +7,10 @@
 body {
     font-family: Arial, sans-serif;
     background-image: url("images/background.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: top center;
+    background-attachment: fixed;
     color: #333;
     line-height: 1.6;
 }
@@ -35,15 +37,32 @@ header {
 nav ul {
     list-style: none;
     display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
 }
 
 nav a {
     text-decoration: none;
     color: #333;
     margin-left: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
-nav a:hover {
+.info-btn {
+    background: white;
+    border: 1px solid #333;
+    border-radius: 999px;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    white-space: nowrap;
+}
+
+.info-btn:hover, nav a:hover {
     color: #007BFF;
 }
 
@@ -89,10 +108,20 @@ nav a:hover {
 
 }
 
+.moods-section h3 {
+    font-size: xx-large;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
 .moods-section p {
     max-width: auto;
     margin: auto;
-    color: #007BFF;
+    color: #1F2937;
     justify-content: center;
 }
 
@@ -112,6 +141,11 @@ nav a:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition:  0.3s ease;
     cursor: pointer;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .mood-card:hover {
@@ -123,6 +157,7 @@ nav a:hover {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    color: #0F172A;
 }
 
 .mood-card-sad {
@@ -130,6 +165,7 @@ nav a:hover {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    color: #fff;
 }
 
 .mood-card-energetic {
@@ -137,6 +173,7 @@ nav a:hover {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    color: #0F172A;
 }
 
 .mood-card-focused {
@@ -144,6 +181,7 @@ nav a:hover {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    color: #fff;
 }
 
 .mood-card-calm {
@@ -151,6 +189,7 @@ nav a:hover {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    color: #0F172A;
 }
 
 .mood-card-sensual {
@@ -158,6 +197,7 @@ nav a:hover {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    color: #fff;
 }
 
 
@@ -178,6 +218,12 @@ nav a:hover {
     background-color: #f9f9f9;
 }
 
+#recommendation-title {
+    margin-bottom: 10px;
+    font-size: xx-large;
+    color: #1A1A1A;
+}
+
 .song-list {
     list-style-type: none;
     padding: 0;
@@ -189,8 +235,13 @@ nav a:hover {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #fff;
+    background-color: #DBE4EE;
     transition: transform 0.2s ease-in-out;
+}
+
+.song-card p {
+    margin: 0;
+    font-size: x-large;
 }
 
 .song-card:hover {
