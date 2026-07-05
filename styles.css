@@ -11,8 +11,19 @@ body {
     background-size: cover;
     background-position: top center;
     background-attachment: fixed;
-    color: #333;
+    color: #1F2937;
     line-height: 1.6;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background: 
+        linear-gradient(rgba(15,23,42,0.78), rgba(15,23,42,0.78)),
+        url("images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 header {
@@ -50,6 +61,7 @@ nav a {
     margin-left: 20px;
     font-size: 1.2rem;
     font-weight: bold;
+    transition: 0.3s ease;
 }
 
 .info-btn {
@@ -76,6 +88,7 @@ nav a {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 5px 10px;
     cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 #themeToggle:hover {
@@ -211,6 +224,7 @@ nav a {
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f9f9f9;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 #recommendation-title {
@@ -231,7 +245,7 @@ nav a {
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #DBE4EE;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .song-card p {
@@ -255,7 +269,7 @@ nav a {
     color: #fff;
     text-decoration: none;
     border-radius: 3px;
-    transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 .listen-btn:hover {
     background-color: #0056b3;
@@ -263,16 +277,12 @@ nav a {
 
 /* About Recommendation Popup Styles */
 .modal {
-    display: none; /* Hidden by default */
-
+    display: none;
     position: fixed;
     inset: 0;
-
     background: rgba(0, 0, 0, 0.45);
-
     justify-content: center;
     align-items: center;
-
     z-index: 1000;
 }
 
@@ -281,34 +291,23 @@ nav a {
 }
 
 .modal-content {
-
     background: white;
-
     width: 90%;
     max-width: 600px;
-
     padding: 2rem;
-
     border-radius: 24px;
-
     position: relative;
-
     box-shadow: 0 15px 40px rgba(0,0,0,.2);
-
     animation: popup .3s ease;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .close {
-
     position: absolute;
-
     top: 18px;
     right: 24px;
-
     font-size: 32px;
-
     cursor: pointer;
-
     color: #555;
 }
 
@@ -317,35 +316,167 @@ nav a {
 }
 
 .modal-content h2{
-
     margin-bottom:1rem;
-
     color:#7c5cff;
-
 }
 
 .modal-content p{
-
     margin-bottom:1rem;
-
     line-height:1.7;
-
 }
 
 @keyframes popup{
-
     from{
-
         opacity:0;
         transform:scale(.9);
-
     }
-
     to{
-
         opacity:1;
         transform:scale(1);
-
     }
+}
+
+/* dark mode styles */
+body.dark-mode {
+    color: #f8fafc;
+}
+
+/* nav */
+body.dark-mode nav a{
+    color:#F8FAFC;
+}
+
+body.dark-mode nav a:hover{
+    color:#60A5FA;
+}
+
+body.dark-mode .info-btn{
+    background:#1E293B;
+    color:#F8FAFC;
+    border:1px solid #475569;
+}
+
+body.dark-mode .info-btn:hover{
+    background:#334155;
+}
+
+body.dark-mode #themeToggle{
+    background:#60A5FA;
+}
+
+/* home */
+body.dark-mode .home-section h1{
+    color:#F8FAFC;
+}
+
+body.dark-mode .home-section p{
+    color:#93C5FD;
+}
+
+/* mood selection */
+body.dark-mode .moods-section h2,
+body.dark-mode .moods-section h3{
+    color:#F8FAFC;
+}
+
+body.dark-mode .moods-section p{
+    color:#CBD5E1;
+}
+
+/* mood cards */
+body.dark-mode .mood-card{
+
+    box-shadow:0 10px 25px rgba(0,0,0,.45);
+
+}
+
+/* recommendations */
+body.dark-mode .recommendations{
+
+    background:#1E293B;
+
+    border:1px solid #334155;
+
+}
+
+body.dark-mode #recommendation-title{
+
+    color:#F8FAFC;
+
+}
+
+body.dark-mode .song-card{
+
+    background:#334155;
+
+    border:1px solid #475569;
+
+    color:#F8FAFC;
+
+}
+
+body.dark-mode .song-card:hover{
+
+    background:#3F4D63;
+
+}
+
+body.dark-mode .song-card p{
+
+    color:#F8FAFC;
+
+}
+
+/* listen btn */
+body.dark-mode .listen-btn{
+
+    background:#60A5FA;
+
+    color:#0F172A;
+
+}
+
+body.dark-mode .listen-btn:hover{
+
+    background:#3B82F6;
+
+}
+
+/* modal */
+body.dark-mode .modal{
+
+    background:rgba(0,0,0,.75);
+
+}
+
+body.dark-mode .modal-content{
+
+    background:#1E293B;
+
+    color:#F8FAFC;
+
+}
+
+body.dark-mode .modal-content h2{
+
+    color:#93C5FD;
+
+}
+
+body.dark-mode .modal-content p{
+
+    color:#CBD5E1;
+
+}
+
+body.dark-mode .close{
+
+    color:#CBD5E1;
+
+}
+
+body.dark-mode .close:hover{
+
+    color:white;
 
 }
