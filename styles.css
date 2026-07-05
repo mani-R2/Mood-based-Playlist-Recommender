@@ -24,6 +24,7 @@ body.dark-mode {
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    color: #f8fafc;
 }
 
 header {
@@ -57,7 +58,7 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: #333;
+    color: #1f2937;
     margin-left: 20px;
     font-size: 1.2rem;
     font-weight: bold;
@@ -153,13 +154,13 @@ nav a {
     padding: 20px;
     border-radius: 24px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition:  0.3s ease;
     cursor: pointer;
     justify-content: center;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: transform .3s ease, box-shadow .3s ease;
 }
 
 .mood-card:hover {
@@ -225,6 +226,13 @@ nav a {
     border-radius: 5px;
     background-color: #f9f9f9;
     transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Glass Effect */
+.recommendations, .modal-content {
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,.30);
+    border-radius: 24px;
 }
 
 #recommendation-title {
@@ -336,11 +344,13 @@ nav a {
     }
 }
 
-/* dark mode styles */
-body.dark-mode {
-    color: #f8fafc;
+footer {
+    background: rgba(15,23,42,.75);
+    backdrop-filter: blur(10px);
+    color: white;
 }
 
+/* dark mode styles */
 /* nav */
 body.dark-mode nav a{
     color:#F8FAFC;
@@ -362,6 +372,10 @@ body.dark-mode .info-btn:hover{
 
 body.dark-mode #themeToggle{
     background:#60A5FA;
+}
+
+body.dark-mode #themeToggle:hover {
+    background: #3B82F6;
 }
 
 /* home */
@@ -392,91 +406,68 @@ body.dark-mode .mood-card{
 
 /* recommendations */
 body.dark-mode .recommendations{
-
     background:#1E293B;
-
     border:1px solid #334155;
+}
 
+body.dark-mode .recommendations, body.dark-mode .modal-content {
+    background: rgba(15,23,42,.30);
 }
 
 body.dark-mode #recommendation-title{
-
     color:#F8FAFC;
-
 }
 
 body.dark-mode .song-card{
-
     background:#334155;
-
     border:1px solid #475569;
-
     color:#F8FAFC;
-
 }
 
 body.dark-mode .song-card:hover{
-
     background:#3F4D63;
+}
 
+body.dark-mode .song-title {
+    color: #F8FAFC;
 }
 
 body.dark-mode .song-card p{
-
     color:#F8FAFC;
-
 }
 
 /* listen btn */
 body.dark-mode .listen-btn{
-
     background:#60A5FA;
-
     color:#0F172A;
-
 }
 
 body.dark-mode .listen-btn:hover{
-
     background:#3B82F6;
-
 }
 
 /* modal */
 body.dark-mode .modal{
-
     background:rgba(0,0,0,.75);
-
 }
 
 body.dark-mode .modal-content{
-
     background:#1E293B;
-
     color:#F8FAFC;
-
 }
 
 body.dark-mode .modal-content h2{
-
     color:#93C5FD;
-
 }
 
 body.dark-mode .modal-content p{
-
     color:#CBD5E1;
-
 }
 
 body.dark-mode .close{
-
     color:#CBD5E1;
-
 }
 
 body.dark-mode .close:hover{
-
     color:white;
-
 }
