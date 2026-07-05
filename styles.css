@@ -23,6 +23,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    white-space: nowrap;
 }
 
 .logo-container {
@@ -200,12 +201,6 @@ nav a {
     color: #fff;
 }
 
-
-
-
-
-
-
 .hidden {
     display: none;
 }  
@@ -264,4 +259,93 @@ nav a {
 }
 .listen-btn:hover {
     background-color: #0056b3;
+}
+
+/* About Recommendation Popup Styles */
+.modal {
+    display: none; /* Hidden by default */
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+
+    background: white;
+
+    width: 90%;
+    max-width: 600px;
+
+    padding: 2rem;
+
+    border-radius: 24px;
+
+    position: relative;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,.2);
+
+    animation: popup .3s ease;
+}
+
+.close {
+
+    position: absolute;
+
+    top: 18px;
+    right: 24px;
+
+    font-size: 32px;
+
+    cursor: pointer;
+
+    color: #555;
+}
+
+.close:hover{
+    color:black;
+}
+
+.modal-content h2{
+
+    margin-bottom:1rem;
+
+    color:#7c5cff;
+
+}
+
+.modal-content p{
+
+    margin-bottom:1rem;
+
+    line-height:1.7;
+
+}
+
+@keyframes popup{
+
+    from{
+
+        opacity:0;
+        transform:scale(.9);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:scale(1);
+
+    }
+
 }

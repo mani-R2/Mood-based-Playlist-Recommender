@@ -1,6 +1,7 @@
 const recommendationsSection = document.getElementById("recommendations");
 const recommendationTitle = document.getElementById("recommendation-title");
 const songList = document.getElementById("song-list");
+console.log("Script loaded successfully.");
 
 const moodSongs = {
     happy: {
@@ -123,28 +124,47 @@ document.querySelectorAll(".mood-card").forEach(card => {
             `;
 
             songList.appendChild(songCard);
-            recommendationsSection.classList.remove("hidden");
+        
         });
+         recommendationsSection.classList.remove("hidden");
     });
 });
 
+/* Dark Mode Toggle */
+const darkModeToggle = document.getElementById("themeToggle");
+
+darkModeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    darkModeToggle.textContent =
+        document.body.classList.contains("dark-mode")
+            ? "☀️"
+            : "🌙";
+});
+
+/* About Modal */
 const aboutBtn = document.getElementById("aboutBtn");
 const aboutModal = document.getElementById("aboutModal");
 const closeModal = document.getElementById("closeModal");
 
-// Open the modal
 aboutBtn.addEventListener("click", () => {
-    aboutModal.classList.remove("hidden");
+
+    aboutModal.classList.add("show");
+
 });
 
-// Close when clicking the X
 closeModal.addEventListener("click", () => {
-    aboutModal.classList.add("hidden");
+
+    aboutModal.classList.remove("show");
+
 });
 
-// Close when clicking outside the modal
 window.addEventListener("click", (event) => {
-    if (event.target === aboutModal) {
-        aboutModal.classList.add("hidden");
+
+    if(event.target === aboutModal){
+
+        aboutModal.classList.remove("show");
+
     }
+
 });
