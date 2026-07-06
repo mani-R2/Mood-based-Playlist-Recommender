@@ -115,7 +115,7 @@ nav a {
 .home-section p {
     max-width: 700px;
     margin: 0 auto;
-    color: #007BFF;
+    color: #051256;
 }
 
 .moods-section {
@@ -370,7 +370,7 @@ footer {
     color: white;
     padding: 20px;
     text-align: center;
-    width: 1200px;
+    width: 100%;
 }
 
 /* dark mode styles */
