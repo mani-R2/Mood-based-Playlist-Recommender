@@ -4,6 +4,11 @@
     padding: 0;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-image: url("images/background.jpg");
@@ -14,6 +19,7 @@ body {
     color: #1F2937;
     line-height: 1.6;
     transition: background 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
 }
 
 body.dark-mode {
@@ -183,6 +189,10 @@ nav a {
     color: #fff;
 }
 
+.mood-card-sad p {
+    color: #fff;
+}
+
 .mood-card-energetic {
     background-image: url("images/energetic.png");
     background-size: cover;
@@ -199,6 +209,11 @@ nav a {
     color: #fff;
 }
 
+.mood-card-focused p {
+    color: #fff;
+}
+
+
 .mood-card-calm {
     background-image: url("images/calm.png");
     background-size: cover;
@@ -212,6 +227,10 @@ nav a {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    color: #fff;
+}
+
+.mood-card-sensual p {
     color: #fff;
 }
 
@@ -351,6 +370,7 @@ footer {
     color: white;
     padding: 20px;
     text-align: center;
+    width: 1200px;
 }
 
 /* dark mode styles */
@@ -399,13 +419,8 @@ body.dark-mode .home-section p{
 }
 
 /* mood selection */
-body.dark-mode .moods-section h2,
-body.dark-mode .moods-section h3{
+body.dark-mode .moods-section h2 {
     color:#F8FAFC;
-}
-
-body.dark-mode .moods-section p{
-    color:#CBD5E1;
 }
 
 /* mood cards */
@@ -479,4 +494,169 @@ body.dark-mode .close{
 
 body.dark-mode .close:hover{
     color:white;
+}
+
+/* tablet */
+@media (max-width: 1024px) {
+    .mood-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .mood-card {
+        width: 280px;
+        height: 400px;
+    }
+
+    .home-section h1 {
+        font-size: 2.2rem;
+    }
+
+    .moods-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .recommendations {
+        width: 90%;
+    }
+}
+
+/* mobile */
+@media (max-width: 768px) {
+
+    /* Header */
+    .header-inner {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        margin-left: 0;
+        font-size: 1rem;
+    }
+
+    /* Home */
+    .home-section {
+        padding: 40px 20px;
+    }
+
+    .home-section h1 {
+        font-size: 2rem;
+    }
+
+    .home-section p {
+        font-size: 1rem;
+    }
+
+    /* Mood Grid */
+    .mood-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .mood-card {
+        width: 90%;
+        max-width: 320px;
+        height: 400px;
+    }
+
+    .moods-section h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Recommendations */
+    .recommendations {
+        width: 90%;
+        padding: 20px;
+    }
+
+    #recommendation-title {
+        font-size: 1.8rem;
+    }
+
+    .song-card p {
+        font-size: 1.1rem;
+    }
+
+    /* Modal */
+    .modal-content {
+        width: 95%;
+        padding: 1.5rem;
+    }
+}
+
+/* small phones */
+@media (max-width: 480px) {
+
+    header {
+        padding: 15px;
+    }
+
+    .logo {
+        width: 180px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .info-btn {
+        width: 100%;
+        max-width: 220px;
+    }
+
+    #themeToggle {
+        width: 42px;
+        height: 42px;
+    }
+
+    .home-section h1 {
+        font-size: 1.7rem;
+    }
+
+    .home-section p {
+        font-size: .95rem;
+    }
+
+    .moods-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .mood-card {
+        width: 100%;
+        max-width: 300px;
+        height: 360px;
+    }
+
+    .mood-card h3 {
+        font-size: 1.8rem;
+    }
+
+    .mood-card p {
+        font-size: .95rem;
+    }
+
+    #recommendation-title {
+        font-size: 1.5rem;
+    }
+
+    .song-card p {
+        font-size: 1rem;
+    }
+
+    .listen-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    footer {
+        font-size: .9rem;
+    }
 }
