@@ -12,6 +12,11 @@ The mood selection functionality was updated so that the click events are initia
 
 The existing recommendation display was kept so that users can still select a mood and view the corresponding playlist and Spotify links.
 
+## Web Storage
+Added web storage using `localStorage` to remember the user's most recently selected mood. When a user selects one of the mood cards, the mood is saved in their browser.
+
+When the page is loaded again, the saved value is retrieved from localStorage and displayed above the mood selection cards. This allows the site to remember the user's previous selection between visits.
+
 # Initial Project Audit
 I started this final project using my previous GIT480 Mood-Based Playlist Recommender project as the base. Before adding any new features, I reviewed the existing HTML, CSS, and JavaScript to determine what needed to be corrected or improved for the new requirements.
 Initial work included:

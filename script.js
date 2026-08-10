@@ -63,8 +63,8 @@ function displaySavedMood() {
 
     if (savedMood) {
         const formattedMood = savedMood.charAt(0).toUpperCase() + savedMood.slice(1);
-        
-        savedMoodMessage.textContent = `Your last selected mood was ${formattedMood}`;
+
+        savedMoodMessage.textContent = `Your last selected mood was ${formattedMood}.`;
     }
 }
 
