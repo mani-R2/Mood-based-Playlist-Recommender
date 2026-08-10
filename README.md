@@ -1,12 +1,12 @@
 # Mood-based-Playlist-Recommender
 This is my senior project web app created for users who want to discover and listen to music based on how they are feeling. Users can choose from different moods and receive curated song recommendations that match the overall vibe and atmosphere of that mood.
 
-This project originally began as a project for my GIT417 course and is being expanded for my final project. The original version included the main HTML and CSS design, mood selection functionality, song recommendations, dark and light mode, and an About Recommendations modal.
+This project originally began as a project for my GIT480 course and is being expanded for my final project. The original version included the main HTML and CSS design, mood selection functionality, song recommendations, dark and light mode, and an About Recommendations modal.
 
 For this final project, I will be reviewing and improving the existing code while adding new functionality to meet the project requirements, including jQuery, AJAX/JSON, web storage, and a slideshow or carousel.
 # Development Log
 # Initial Project Audit
-I started this final project using my previous GIT417 Mood-Based Playlist Recommender project as the base. Before adding any new features, I reviewed the existing HTML, CSS, and JavaScript to determine what needed to be corrected or improved for the new requirements.
+I started this final project using my previous GIT480 Mood-Based Playlist Recommender project as the base. Before adding any new features, I reviewed the existing HTML, CSS, and JavaScript to determine what needed to be corrected or improved for the new requirements.
 Initial work included:
 * Reviewing the existing project files and organization.
 * Checking the semantic structure of the HTML.
