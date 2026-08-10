@@ -146,6 +146,12 @@ nav a {
     justify-content: center;
 }
 
+#savedMoodMessage {
+    margin-bottom: 25px;
+    font-weight: bold;
+    color: #051256;
+}
+
 .mood-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -425,6 +431,9 @@ body.dark-mode .moods-section h2 {
     color:#F8FAFC;
 }
 
+body.dark-mode #savedMoodMessage {
+    color: #93C5FD;
+}
 /* mood cards */
 body.dark-mode .mood-card{
     box-shadow:0 10px 25px rgba(0,0,0,.45);

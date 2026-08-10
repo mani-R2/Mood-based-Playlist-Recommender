@@ -2,6 +2,7 @@
 const recommendationsSection = document.getElementById("recommendations");
 const recommendationTitle = document.getElementById("recommendation-title");
 const songList = document.getElementById("song-list");
+const savedMoodMessage = document.getElementById("savedMoodMessage");
 
 let moodSongs = {};
 
@@ -16,6 +17,7 @@ fetch("songs.json")
     .then(data => {
         moodSongs = data;
         setupMoodCards();
+        displaySavedMood();
     })
     .catch(error => {
         console.error("Error loading song recommendations:", error);
@@ -30,6 +32,9 @@ function setupMoodCards() {
             if (!selectedMood) {
                 return;
             }
+
+            localStorage.setItem("lastMood", mood);
+            displaySavedMood();
 
             recommendationTitle.textContent = selectedMood.title;
             songList.innerHTML = "";
@@ -51,6 +56,16 @@ function setupMoodCards() {
             recommendationsSection.classList.remove("hidden");
         });
     });
+}
+
+function displaySavedMood() {
+    const savedMood = localStorage.getItem("lastMood");
+
+    if (savedMood) {
+        const formattedMood = savedMood.charAt(0).toUpperCase() + savedMood.slice(1);
+        
+        savedMoodMessage.textContent = `Your last selected mood was ${formattedMood}`;
+    }
 }
 
 /* Dark Mode Toggle */
