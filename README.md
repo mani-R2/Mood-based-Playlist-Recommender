@@ -12,6 +12,9 @@ The mood selection functionality was updated so that the click events are initia
 
 The existing recommendation display was kept so that users can still select a mood and view the corresponding playlist and Spotify links.
 
+### Recommendation Navigation Improvement
+Added smooth scrolling to the song recommendations section after a user selects a mood. This makes it easier for users to see the dynamically loaded recommendations without having to manually scroll down the page.
+
 ## Web Storage
 Added web storage using `localStorage` to remember the user's most recently selected mood. When a user selects one of the mood cards, the mood is saved in their browser.
 
