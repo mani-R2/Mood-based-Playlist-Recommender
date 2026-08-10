@@ -238,7 +238,7 @@ nav a {
     display: none;
 }  
 
-.recommendations {
+.recommendations-section {
     margin: 40px auto;
     max-width: 900px;
     padding: 15px;
@@ -249,7 +249,7 @@ nav a {
 }
 
 /* Glass Effect */
-.recommendations, .modal-content {
+.recommendations-section, .modal-content {
     backdrop-filter: blur(10px);
     background: rgba(255,255,255,.30);
     border-radius: 24px;
@@ -337,6 +337,8 @@ nav a {
     font-size: 32px;
     cursor: pointer;
     color: #555;
+    background: none;
+    border: none;
 }
 
 .close:hover{
@@ -433,7 +435,7 @@ body.dark-mode .mood-card:hover {
 }
 
 /* recommendations */
-body.dark-mode .recommendations, body.dark-mode .modal-content {
+body.dark-mode .recommendations-section, body.dark-mode .modal-content {
     background: rgba(15,23,42,.30);
     border:1px solid #334155;
 }
@@ -571,7 +573,7 @@ body.dark-mode .close:hover{
     }
 
     /* Recommendations */
-    .recommendations {
+    .recommendations-section {
         width: 90%;
         padding: 20px;
     }

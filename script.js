@@ -1,3 +1,4 @@
+"uses strict";
 const recommendationsSection = document.getElementById("recommendations");
 const recommendationTitle = document.getElementById("recommendation-title");
 const songList = document.getElementById("song-list");
