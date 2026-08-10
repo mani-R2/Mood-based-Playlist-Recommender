@@ -54,6 +54,11 @@ function setupMoodCards() {
             });
 
             recommendationsSection.classList.remove("hidden");
+
+            recommendationsSection.scrollIntoView({ 
+                behavior: "smooth",
+                block: "start"
+            });
         });
     });
 }
