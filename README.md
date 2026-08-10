@@ -17,6 +17,11 @@ Added web storage using `localStorage` to remember the user's most recently sele
 
 When the page is loaded again, the saved value is retrieved from localStorage and displayed above the mood selection cards. This allows the site to remember the user's previous selection between visits.
 
+## jQuery Widget
+Added a jQuery UI Accordion to provide additional information about how the music recommendations work.
+
+The accordion allows users to expand and collapse sections explaining how songs are selected, why mood-based recommendations are used, and how the recommendations are curated. The jQuery and jQuery UI libraries were added to support the widget.
+
 # Initial Project Audit
 I started this final project using my previous GIT480 Mood-Based Playlist Recommender project as the base. Before adding any new features, I reviewed the existing HTML, CSS, and JavaScript to determine what needed to be corrected or improved for the new requirements.
 Initial work included:
