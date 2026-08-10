@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mood-Based Playlist Recommender</title>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.2/themes/base/jquery-ui.css">
+
     <link rel="stylesheet" href="styles.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.2/jquery-ui.min.js" defer></script>
+
     <script src="script.js" defer></script>
 </head>
 
@@ -22,7 +29,7 @@
                     <li><a href="#moods">Moods</a></li>
                     <li>
                         <button id="aboutBtn" class="info-btn">
-                            <i class="fas fa-info-circle"></i> About Recommendations
+                            About Recommendations
                         </button>
                     </li>
                     <li>
@@ -42,7 +49,7 @@
 
         <section id="moods" class="moods-section">
             <h2>How are you feeling?</h2>
-            
+
             <p id="savedMoodMessage"></p>
 
             <div class="mood-grid">
@@ -62,18 +69,18 @@
                 </div>
 
                 <div class="mood-card mood-card-focused" data-mood="focused">
-                <h3>Focused</h3>
-                <p>Concentrated and motivating music for productivity.</p>
+                    <h3>Focused</h3>
+                    <p>Concentrated and motivating music for productivity.</p>
                 </div>
 
                 <div class="mood-card mood-card-calm" data-mood="calm">
-                <h3>Calm</h3>
-                <p>Calm and soothing sounds to help you unwind.</p>
+                    <h3>Calm</h3>
+                    <p>Calm and soothing sounds to help you unwind.</p>
                 </div>
 
                 <div class="mood-card mood-card-sensual" data-mood="sensual">
-                <h3>Sensual</h3>
-                <p>Intimate and passionate music for a romantic evening.</p>
+                    <h3>Sensual</h3>
+                    <p>Intimate and passionate music for a romantic evening.</p>
                 </div>
             </div>
         </section>
@@ -84,8 +91,29 @@
             <div id="song-list" class="song-list">
                 <!-- Songs will be dynamically inserted here based on the selected mood -->
             </div>
-
         </section>
+
+        <section id="about-recommendations" class="about-section">
+            <h2>How Recommendations Work</h2>
+
+            <div id="recommendationAccordion">
+                <h3>How are songs selected?</h3>
+                <div>
+                    <p>Songs are selected based on their overall mood, energy, atmosphere, and listening experience.</p>
+                </div>
+
+                <h3>Why use mood-based recommendations?</h3>
+                <div>
+                    <p>Mood categories make it easier to discover music based on how you feel or how you want to feel.</p>
+                </div>
+
+                <h3>Are the recommendations personalized?</h3>
+                <div>
+                    <p>The recommendations are curated suggestions rather than predictions. Music preferences can vary from person to person.</p>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <div id="aboutModal" class="modal">
@@ -105,7 +133,7 @@
     </div>
 
     <footer>
-    <p>&copy; 2026 Mood-Based Playlist Recommender. All rights reserved.</p>
+        <p>&copy; 2026 Mood-Based Playlist Recommender. All rights reserved.</p>
     </footer>
 </body>
 </html>

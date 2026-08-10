@@ -98,3 +98,11 @@ window.addEventListener("click", (event) => {
         aboutModal.classList.remove("show");
     }
 });
+
+$(function() {
+    $("#recommendationAccordion").accordion({
+        collapsible: true,
+        heightStyle: "content",
+    });
+});
+
