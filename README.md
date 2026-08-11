@@ -26,9 +26,11 @@ Added a jQuery UI Accordion to provide additional information about how the musi
 The accordion allows users to expand and collapse sections explaining how songs are selected, why mood-based recommendations are used, and how the recommendations are curated. The jQuery and jQuery UI libraries were added to support the widget.
 
 ## Featured Playlist Carousel
-Added a featured playlist carousel using jQuery. The carousel includes three featured playlists: Energy Rush, Sensual Seduction, and Peaceful Reset.
+Added the Slick jQuery carousel plugin to create a featured playlist slideshow.
 
-Users can navigate forward and backward through the playlists using the previous and next buttons. jQuery is used to hide and display the appropriate slide based on the user's selection.
+The carousel includes three featured playlists: Energetic Rush, Sensual Seduction, and Peaceful Reset. Users can move between the playlists using the previous and next arrows or the navigation dots.
+
+Autoplay is disabled so users have control over which playlist they view. The carousel uses the Slick plugin for its slideshow functionality.
 
 # Initial Project Audit
 I started this final project using my previous GIT480 Mood-Based Playlist Recommender project as the base. Before adding any new features, I reviewed the existing HTML, CSS, and JavaScript to determine what needed to be corrected or improved for the new requirements.
