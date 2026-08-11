@@ -104,10 +104,42 @@ window.addEventListener("click", (event) => {
     }
 });
 
+/* Accordion */
 $(function() {
     $("#recommendationAccordion").accordion({
         collapsible: true,
-        heightStyle: "content",
+        heightStyle: "content"
     });
 });
 
+/* Featured playlists */
+let currentSlide = 0;
+const slides = $(".carousel-slide");
+
+slides.hide();
+slides.eq(currentSlide).show();
+
+function showSlide(index) {
+    slides.hide();
+    slides.eq(index).show();
+}
+
+$("#prevSlide").on("click", function () {
+    currentSlide--;
+
+    if (currentSlide < 0) {
+        currentSlide = slides.length - 1;
+    }
+
+    showSlide(currentSlide);
+});
+
+$("#nextSlide").on("click", function () {
+    currentSlide++;
+
+    if (currentSlide >= slides.length) {
+        currentSlide = 0;
+    }
+
+    showSlide(currentSlide);
+});
