@@ -1,4 +1,6 @@
 "use strict";
+
+/* DOM Elements */
 const recommendationsSection = document.getElementById("recommendations");
 const recommendationTitle = document.getElementById("recommendation-title");
 const songList = document.getElementById("song-list");
@@ -6,6 +8,7 @@ const savedMoodMessage = document.getElementById("savedMoodMessage");
 
 let moodSongs = {};
 
+/* AJAX / JSON Playlist Data */
 fetch("songs.json")
     .then(response => {
         if (!response.ok) {
@@ -23,6 +26,7 @@ fetch("songs.json")
         console.error("Error loading song recommendations:", error);
     });
 
+/* Mood Selection */
 function setupMoodCards() {
     document.querySelectorAll(".mood-card").forEach(card => {
         card.addEventListener("click", () => {
@@ -63,6 +67,7 @@ function setupMoodCards() {
     });
 }
 
+/* Web Storage */
 function displaySavedMood() {
     const savedMood = localStorage.getItem("lastMood");
 
@@ -99,7 +104,7 @@ closeModal.addEventListener("click", () => {
 });
 
 window.addEventListener("click", (event) => {
-    if(event.target === aboutModal){
+    if (event.target === aboutModal){
         aboutModal.classList.remove("show");
     }
 });
