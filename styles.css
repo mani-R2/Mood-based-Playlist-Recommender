@@ -385,16 +385,10 @@ nav a {
 }
 
 .playlist-carousel {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+    width: 100%;
 }
 
-.carousel-track {
-    flex: 1;
-}
-
-carousel-slide {
+.carousel-slide {
     padding: 20px;
     border-radius: 24px;
     background: rgba(255, 255, 255, 0.85);
@@ -416,21 +410,6 @@ carousel-slide {
 
 .carousel-slide p {
     font-size: 1rem;
-}
-
-#prevSlide, #nextSlide {
-    border: none;
-    background: #007BFF;
-    color: white;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease;
-}
-
-#prevSlide:hover, #nextSlide:hover {
-    background: #0056b3;
 }
 
 /* jQuery UI */
@@ -612,17 +591,6 @@ body.dark-mode .about-section{
 body.dark-mode .carousel-slide {
     background: rgba(15, 23, 42, 0.35);
     color: #F8FAFC;
-}
-
-body.dark-mode #prevSlide,
-body.dark-mode #nextSlide {
-    background: #60A5FA;
-    color: #0F172A;
-}
-
-body.dark-mode #prevSlide:hover,
-body.dark-mode #nextSlide:hover {
-    background: #3B82F6;
 }
 
 /* jQuery UI */

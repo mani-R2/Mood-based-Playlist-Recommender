@@ -7,10 +7,15 @@
 
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.2/themes/base/jquery-ui.css">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@master/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@master/slick/slick-theme.css">
+
     <link rel="stylesheet" href="styles.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.2/jquery-ui.min.js" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@master/slick/slick.min.js" defer></script>
 
     <script src="script.js" defer></script>
 </head>
@@ -97,33 +102,23 @@
             <h2>Featured Playlists</h2>
 
             <div class="playlist-carousel">
-                <button id="prevSlide" type="button" aria-label="Previous featured playlist">
-                    &#10094;
-                </button>
-
-                <div class="carousel-track">
-                    <div class="carousel-slide">
-                        <img src="images/energetic.png" alt="Energetic playlist">
-                        <h3>Energetic Rush</h3>
-                        <p>Get your blood pumping with high-energy tracks.</p>
-                    </div>
-
-                    <div class="carousel-slide">
-                        <img src="images/sensual.png" alt="Sensual playlist">
-                        <h3>Sensual Seduction</h3>
-                        <p>Experience the thrill of intimate melodies.</p>
-                    </div>
-
-                    <div class="carousel-slide">
-                        <img src="images/calm.png" alt="Calm playlist">
-                        <h3>Peaceful Reset</h3>
-                        <p>Relax and unwind with soothing sounds.</p>
-                    </div>
+                <div class="carousel-slide">
+                   <img src="images/energetic.png" alt="Energetic playlist">
+                    <h3>Energetic Rush</h3>
+                    <p>Get your blood pumping with high-energy tracks.</p>
                 </div>
 
-                <button id="nextSlide" type="button" aria-label="Next featured playlist">
-                    &#10095;
-                </button>
+                <div class="carousel-slide">
+                    <img src="images/sensual.png" alt="Sensual playlist">
+                    <h3>Sensual Seduction</h3>
+                    <p>Experience the thrill of intimate melodies.</p>
+                </div>
+
+                <div class="carousel-slide">
+                    <img src="images/calm.png" alt="Calm playlist">
+                    <h3>Peaceful Reset</h3>
+                    <p>Relax and unwind with soothing sounds.</p>
+                </div>
             </div>
         </section>
 
