@@ -9,6 +9,7 @@ const savedMoodMessage = document.getElementById("savedMoodMessage");
 let moodSongs = {};
 
 /* AJAX / JSON Playlist Data */
+// Load the playlist data before setting up the mood card events so users cannot select a mood before the recommendation data is ready. 
 fetch("songs.json")
     .then(response => {
         if (!response.ok) {
@@ -37,6 +38,7 @@ function setupMoodCards() {
                 return;
             }
 
+            // Save the selected mood to localStorage so it can be displayed after the page is refreshed.
             localStorage.setItem("lastMood", mood);
             displaySavedMood();
 
@@ -59,6 +61,7 @@ function setupMoodCards() {
 
             recommendationsSection.classList.remove("hidden");
 
+            // Move the recommendations section into view after the mood is selected, so they don't manually have to scroll down to see the page content.
             recommendationsSection.scrollIntoView({ 
                 behavior: "smooth",
                 block: "start"
@@ -68,6 +71,7 @@ function setupMoodCards() {
 }
 
 /* Web Storage */
+// Check's whether the mood exists before trying ot display it.
 function displaySavedMood() {
     const savedMood = localStorage.getItem("lastMood");
 
@@ -103,6 +107,7 @@ closeModal.addEventListener("click", () => {
     aboutModal.classList.remove("show");
 });
 
+// Close the modal when clicking outside of it
 window.addEventListener("click", (event) => {
     if (event.target === aboutModal){
         aboutModal.classList.remove("show");
@@ -110,6 +115,7 @@ window.addEventListener("click", (event) => {
 });
 
 /* Accordion */
+// Use the jQuery UI accordion to keep the recommendation information organized while allowing users to expand only the section they want to read.
 $(function() {
     $("#recommendationAccordion").accordion({
         collapsible: true,
@@ -118,6 +124,7 @@ $(function() {
 });
 
 /* Featured playlists carousel plugin */
+// Initialize Slick with manual controls so users choose when the featured playlist changes instead of having the carousel autoplay.
 $(function () {
     $(".playlist-carousel").slick({
         slidesToShow: 1,
